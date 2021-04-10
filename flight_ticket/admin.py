@@ -6,5 +6,5 @@ from flight_ticket.models import FlightTicket
 
 
 @admin.register(FlightTicket)
-class PersonAdmin(AuditModelAdmin):
+class StandardAdmin(AuditModelAdmin):
     pass

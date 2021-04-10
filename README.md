@@ -1,5 +1,8 @@
 # web-app
 
+To add in CI/CD:
+pipenv lock --requirements > requirements.txt
+
 
 ## Local Development on macOS
 1. Install python with [pyenv](https://github.com/pyenv/pyenv)
