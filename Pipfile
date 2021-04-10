@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+social-auth-app-django = "*"
+python-jose = "*"
+django-tenants = "*"
+
+[dev-packages]
+yapf = "*"
+
+[scripts]
+start = "python manage.py runserver"
+makemigrations = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+
+[requires]
+python_version = "3.8"
