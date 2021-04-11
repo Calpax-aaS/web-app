@@ -1,0 +1,38 @@
+name: On Push Pipeline
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  deploy:
+    name: Deploy to Clever Cloud
+    runs-on: ubuntu-latest
+
+    steps:
+      # This action requires an unshallow working copy,
+      # so the following prerequisites are necessary:
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
+
+      - uses: 47ng/actions-clever-cloud@master
+        with:
+          # Clever Cloud Python exec env
+          appID: app_4726ef54-195d-4f5e-97df-2b7ace21ba06
+          CLEVER_ENV_PYTHON_VERSION: 3.8
+          CLEVER_ENV_PYTHON_BACKEND: gunicorn
+          CLEVER_ENV_CC_FS_BUCKET: /data:bucket-a3a6e0d4-ce6d-404c-b931-cb79b5858645-fsbucket.services.clever-cloud.com
+          CLEVER_ENV_CC_CACHE_DEPENDENCIES: true
+          CLEVER_ENV_CC_PYTHON_MODULE: config.wsgi:application
+          CLEVER_ENV_CC_PRE_BUILD_HOOK: ./clevercloud/pre_build_hook.sh
+          # Clever Cloud Nginx server to serve static files
+          CLEVER_ENV_STATIC_URL_PREFIX: /public
+          CLEVER_ENV_STATIC_FILES_PATH: data/
+          # Django application
+          CLEVER_ENV_DJANGO_STATIC_PATH: data/static
+          CLEVER_ENV_DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+          CLEVER_ENV_AUTH0_CLIENT_ID: gIK7vqFWtjJszYgIbWtxxziY6Xe7qQ2F
+          CLEVER_ENV_AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
+          extraEnvSafelist: PYTHON_VERSION,PYTHON_BACKEND,CC_FS_BUCKET,CC_CACHE_DEPENDENCIES,CC_PYTHON_MODULE,CC_PRE_BUILD_HOOK,STATIC_URL_PREFIX,STATIC_FILES_PATH,DJANGO_STATIC_PATH,DJANGO_SECRET_KEY,AUTH0_CLIENT_ID,AUTH0_CLIENT_SECRET
+        env:
+          CLEVER_TOKEN: ${{ secrets.CLEVER_TOKEN }}
+          CLEVER_SECRET: ${{ secrets.CLEVER_SECRET }}
