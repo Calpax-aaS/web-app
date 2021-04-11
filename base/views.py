@@ -1,12 +1,8 @@
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 
 from config import settings
-
-
-def index(request):
-    return render(request, 'base/base.html')
 
 
 @login_required

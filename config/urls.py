@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from base import views
+from base.views import logout
+from flight_ticket.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('social_django.urls')),
-    path('', views.index, name='index'),
-    path('logout/', views.logout, name='logout'),
+    path('', index, name='index'),
+    path('logout/', logout, name='logout'),
 ]

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'social_django',
     'base',
     'flight_ticket'
@@ -76,7 +77,7 @@ SOCIAL_AUTH_AUTH0_SCOPE = [
 SESSION_COOKIE_AGE = 86400
 
 AUTHENTICATION_BACKENDS = {
-    'social_core.backends.auth0.Auth0OAuth2',
+    'base.auth0.Auth0',
     'django.contrib.auth.backends.ModelBackend'
 }
 
