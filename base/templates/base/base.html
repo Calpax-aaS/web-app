@@ -11,12 +11,6 @@
       <div class="hero-head">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start pl-2">
-              <a href="/" class="navbar-item">Home</a>
-              {% if perms.feedapp.view_report %}
-                <a href="{% url 'reports' %}" class="navbar-item">Reports</a>
-              {% endif %}
-            </div>
             <div class="navbar-end pr-2">
               <div class="navbar-item">
                 <div class="buttons">
