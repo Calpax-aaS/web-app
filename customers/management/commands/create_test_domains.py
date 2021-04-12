@@ -52,17 +52,21 @@ class Command(BaseCommand):
             domain_name = options['domain_name']
 
         # Add one or more domains for the tenant
-        if tenant.domain_url is not None:
+        try:
             domain = Domain()
             domain.domain = 'sandbox-cameronballoons.' + domain_name  # don't add your port or www here! on a local server you'll want to use localhost here
-            domain.tenant = tenant
+            domain.tenant = Client.objects.get(schema_name='sandbox_cameronballoons')
             domain.is_primary = True
             domain.save()
+        except IntegrityError:
+            print('--> sandbox_cameronballoons domain already exists')
 
         # Add one or more domains for the tenant
-        if tenant1.domain_url is not None:
+        try:
             domain = Domain()
             domain.domain = 'cameronballoons.' + domain_name  # don't add your port or www here! on a local server you'll want to use localhost here
-            domain.tenant = tenant1
+            domain.tenant = Client.objects.get(schema_name='cameronballoons')
             domain.is_primary = True
             domain.save()
+        except IntegrityError:
+            print('--> cameronballoons domain already exists')
