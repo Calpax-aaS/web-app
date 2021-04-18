@@ -40,6 +40,11 @@ Github + actions to store and deploy code
 ### Framework
 Django for the quality of ecosystem and the built-in admin interface
 
+### Frontent
+https://github.com/viewflow/django-material
+https://github.com/app-generator/django-dashboard-material
+https://github.com/langdonms/portfolio-mdc-starter-kit/tree/master/dist
+
 ### Libs Django
 #### Multi tenant
 https://djangopackages.org/grids/g/multi-tenancy/

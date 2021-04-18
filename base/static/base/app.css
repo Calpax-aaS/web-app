@@ -1,0 +1,98 @@
+body {
+  font-size: 1rem;
+}
+
+.bi {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+.sidebar-mini p, .sidebar p, #sidebar {
+  transition: all 0.3s linear;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-item {
+  max-width: 100%;
+
+}
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+  line-height: 2rem;
+  padding: 0rem 1rem;
+}
+
+.sidebar .nav-link .bi {
+  color: #727272;
+
+  float: left;
+  margin-right: 15px;
+}
+
+.sidebar p {
+  opacity: 1;
+  margin: 0;
+  position: relative;
+  display: block;
+  height: auto;
+  white-space: nowrap;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .bi,
+.sidebar .nav-link.active .bi {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.sidebar svg {
+    stroke-width: 0.02em;
+    stroke: currentColor;
+    fill: currentColor;
+    overflow: visible;
+}
+
+.sidebar-mini p {
+  opacity:0;
+  transform:translate3d(-50%,0,0);
+}

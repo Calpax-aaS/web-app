@@ -1,41 +1,201 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  </head>
-  <body>
-    <section class="hero is-info">
-      <div class="hero-head">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end pr-2">
-              <div class="navbar-item">
-                <div class="buttons">
-                  {% if user.is_authenticated %}
-                  <a class="button is-danger" href="/logout/">Logout</a>
-                  {% else %}
-                  <a class="button is-link" href="/login/auth0">Login</a>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p class="title">{% block main_title %}{% endblock %}</p>
-            <p class="subtitle">{% block sub_title %}{% endblock %}</p>
+{% extends 'base/bootstrap.html' %}
+
+{% load bootstrap_icons %}
+
+{% block plop %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-sm-5 col-6 d-md-block bg-light" id="sidebar">
+        <div class="sidebar">
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  {% bs_icon 'house-door' %}
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark' %}
+                  <p>Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'cart2' %}
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'people' %}
+                  <p>Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'bar-chart' %}
+                  <p>Reports</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'stack' %}
+                  <p>Integrations</p>
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <p>Saved reports</p>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Current month</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Last quarter</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Social engagement yolo</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  {% bs_icon 'file-earmark-bar-graph' %}
+                  <p>Year-end sale toto</p>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        {% block content %}{% endblock %}
-      </div>
-    </section>
-  </body>
-</html>
+
+      <main class="col px-md-4">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="menu-toggle" class="btn btn-info">
+              {% bs_icon 'list' %}
+              <p>Toggle Sidebar</p>
+            </button>
+          </div>
+        </nav>
+
+        {% block content %}(no content){% endblock %}
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</p>
+
+      </main>
+    </div>
+  </div>
+
+
+{% endblock %}

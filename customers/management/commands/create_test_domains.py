@@ -45,7 +45,7 @@ class Command(BaseCommand):
                              on_trial=False)
             tenant1.save()
         except IntegrityError:
-            print('--> sandbox_cameronballoons schema already exists')
+            print('--> cameronballoons schema already exists')
 
         domain_name = 'calpax.local'
         if options['domain_name']:
