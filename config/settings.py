@@ -135,6 +135,8 @@ TENANT_DOMAIN_MODEL = "customers.Domain"
 
 INSTALLED_APPS = list(SHARED_APPS) + [app for app in TENANT_APPS if app not in SHARED_APPS]
 
+# Django Bootstrap image
+BS_ICONS_CUSTOM_PATH = 'base/svg'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

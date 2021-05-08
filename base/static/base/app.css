@@ -11,7 +11,7 @@ body {
 /*
  * Sidebar
  */
-.sidebar-mini p, .sidebar p, #sidebar {
+.sidebar-mini p, .sidebar p, .navbar-brand p, #sidebar {
   transition: all 0.3s linear;
 }
 
@@ -46,20 +46,24 @@ body {
 
 .sidebar .nav-item {
   max-width: 100%;
-
 }
+
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: var(--bs-gray-dark);
   line-height: 2rem;
   padding: 0rem 1rem;
 }
 
+.navbar-brand .calpax-logo,
 .sidebar .nav-link .bi {
-  color: #727272;
-
   float: left;
-  margin-right: 15px;
+  margin-right: 0.8rem;
+}
+
+.sidebar .nav-link .bi {
+  color: var(--bs-gray);
+  margin: 0.25rem 0.8rem 0.25rem 0;
 }
 
 .sidebar p {
@@ -72,7 +76,7 @@ body {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: var(--bs-primary);
 }
 
 .sidebar .nav-link:hover .bi,
@@ -95,4 +99,9 @@ body {
 .sidebar-mini p {
   opacity:0;
   transform:translate3d(-50%,0,0);
+}
+
+.calpax-logo {
+  height: 2rem;
+  width: 2rem;
 }
