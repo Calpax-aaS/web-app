@@ -22,10 +22,18 @@ docker run --name database -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d
 ```
 cp .env.template .env
 pipenv install
-pipenv migrate
+pipenv run python manage.py migrate_schemas --shared
+pipenv run python manage.py create_test_domains
 pipenv run start
 ```
 
+5. /etc/hosts config for local dev
+```
+127.0.0.1       sandbox-cameronballoons.calpax.local
+127.0.0.1       cameronballoons.calpax.local
+```
+
+6. Connect on cameronballoons.calpax.local
 
 
 ## Tech choices

@@ -29,8 +29,7 @@ SECRET_KEY = ev.django_secret
 DEBUG = ev.django_is_debug_activated
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
+    '.calpax.local',
     '.calpax.fr'
 ]
 
