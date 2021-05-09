@@ -22,6 +22,7 @@ docker run --name database -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d
 ```
 cp .env.template .env
 pipenv install
+pipenv run python manage.py makemigrations
 pipenv run python manage.py migrate_schemas --shared
 pipenv run python manage.py create_test_domains
 pipenv run start
@@ -33,8 +34,12 @@ pipenv run start
 127.0.0.1       cameronballoons.calpax.local
 ```
 
-6. Connect on cameronballoons.calpax.local
+6. Connect on cameronballoons.calpax.local:8000
 
+7. Create a superuser for a tenant
+```
+   pipenv run python manage.py create_tenant_superuser -s cameronballoons --username admin --email admin@admin.com
+```
 
 ## Tech choices
 ### IdP
