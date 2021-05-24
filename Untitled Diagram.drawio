@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-24T14:44:16.991Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Safari/605.1.15" etag="Vq0qqxmXSHi2CFykBpYM" version="14.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-24T16:04:39.104Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Safari/605.1.15" etag="9_h3V_-euWJ-GaRtlEau" version="14.7.0" type="github">
   <diagram id="4yYH3lNlBNUkoaNyeF3B" name="Page-1">
     <mxGraphModel dx="1617" dy="501" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,6 +19,9 @@
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=7;startArrow=none;startFill=0;" edge="1" parent="1" source="7Kn5XyeDIOlXOPeCKVWs-8" target="7Kn5XyeDIOlXOPeCKVWs-64">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="7Kn5XyeDIOlXOPeCKVWs-8" target="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-8" value="Carnet de vol pilote" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="755" y="410" width="60" height="80" as="geometry" />
         </mxCell>
@@ -26,38 +29,47 @@
           <mxGeometry x="686.15" y="110" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-15" value="Pilote" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="540" y="540" width="140" height="104" as="geometry">
+          <mxGeometry x="540" y="540" width="140" height="242" as="geometry">
             <mxRectangle x="414" y="390" width="60" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-25" value="Numéro de licence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-16" value="Nom / Prénom" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-16" value="Nom / Prénom" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-25" value="Numéro de licence pilote" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
           <mxGeometry y="52" width="140" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-137" value="Date du dernier controle&#xa;de compétence (48 mois)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
+          <mxGeometry y="78" width="140" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-17" value="Dernière visite médicale" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
-          <mxGeometry y="78" width="140" height="26" as="geometry" />
+          <mxGeometry y="118" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-138" value="Qualification additionnelle&#xa;* Commerciale&#xa;   -&gt; Date de dernier contrôle compétence commercial (24 mois)&#xa;   -&gt; Dernier vol d&#39;entrainement commercial&#xa;* Instructeur&#xa;* Vol de nuit" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-15">
+          <mxGeometry y="144" width="140" height="98" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-26" value="Vol" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="715" y="540" width="140" height="156" as="geometry">
+          <mxGeometry x="715" y="540" width="140" height="226" as="geometry">
             <mxRectangle x="414" y="390" width="60" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-27" value="Pilote" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-139" value="Type de vol&#xa;Entrainement / commercial &#xa;/ Loisir / Instruction / vol nuit&#xa;/ Controle de compétence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
+          <mxGeometry y="52" width="140" height="70" as="geometry" />
+        </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-28" value="Ballon" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
-          <mxGeometry y="52" width="140" height="26" as="geometry" />
+          <mxGeometry y="122" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-29" value="Heure déco / aterro" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
-          <mxGeometry y="78" width="140" height="26" as="geometry" />
+          <mxGeometry y="148" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-30" value="Lieu déco / atterri" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
-          <mxGeometry y="104" width="140" height="26" as="geometry" />
+          <mxGeometry y="174" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-33" value="Trace du vol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-26">
-          <mxGeometry y="130" width="140" height="26" as="geometry" />
+          <mxGeometry y="200" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="7Kn5XyeDIOlXOPeCKVWs-35" target="7Kn5XyeDIOlXOPeCKVWs-8">
           <mxGeometry relative="1" as="geometry" />
@@ -325,6 +337,34 @@
         </mxCell>
         <mxCell id="7Kn5XyeDIOlXOPeCKVWs-132" value="Synchro des données de vol à définir. Faut-il un consentement ?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
           <mxGeometry x="385.24" y="404" width="221" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.457;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="7Kn5XyeDIOlXOPeCKVWs-133" target="7Kn5XyeDIOlXOPeCKVWs-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-133" value="Suivi du paiement" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-226" y="696" width="140" height="52" as="geometry">
+            <mxRectangle x="414" y="390" width="60" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-141" value="Instructeur" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="540" width="140" height="156" as="geometry">
+            <mxRectangle x="414" y="390" width="60" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-142" value="Nom / Prénom" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-143" value="Numéro de licence pilote" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-151" value="Dernier stage" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-148" value="Heure d&#39;instructions" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry y="104" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Kn5XyeDIOlXOPeCKVWs-149" value="Vol de controle (9 ans)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="7Kn5XyeDIOlXOPeCKVWs-141">
+          <mxGeometry y="130" width="140" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
